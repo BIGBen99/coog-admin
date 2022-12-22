@@ -247,7 +247,7 @@ _celery() {
     then
         q="$*"
     else
-        q="$(python -W ignore $COOG_BIN/load_batches.py --run_specific | tr '\n' ',' 2> /dev/null)"
+        q="$(python -W ignore $COOG_BIN/load_batches.py | tr '\n' ',' 2> /dev/null)"
     fi
 
     local max_tasks
